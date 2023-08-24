@@ -1,2 +1,2 @@
-# freeCodeCamp-Responsive-Web-Design
+# freeCodeCamp Responsive Web Design Course
 Certification projects
