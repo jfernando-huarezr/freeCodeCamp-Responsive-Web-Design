@@ -88,8 +88,49 @@ code {
 }
 
 .multiline {
-    white-space: pre-wrap;
+    white-space: pre-line;
   }
+
+
+  @media (max-width: 480px){
+    .flex-container {
+        flex-direction: column;
+
+    }
+
+    .wrapper {
+        height: 40vh;
+        min-height: 0;
+        overflow-y: scroll;
+    }
+
+    #navbar {
+        width: 100%;        
+    }
+
+    #navbar li, #navbar header {
+        padding: 15px 0px;
+    }
+
+    .nav-link {
+        padding: 0 20px;
+    }
+
+    #main-doc {
+        overflow: unset;
+        padding: 40px 0px;
+    }
+
+    .main-section {
+        padding: 0px 20px;
+    }
+
+    code {
+        margin-left: 0;
+        font-size: 1.2rem;
+    }
+
+ }
 
 
 
