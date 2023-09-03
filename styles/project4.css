@@ -90,7 +90,7 @@ iframe {
     margin-top: 30px;
 }
 
-#formulario {
+#form {
     text-align: center;
 }
 
@@ -202,4 +202,12 @@ iframe {
 .footer-content-section p {
     margin-top: 5px;
     color: darkslategray;
+}
+
+
+@media (max-width: 768px){
+
+    .hiw-container {
+        flex-direction: column;
+    }
 }
