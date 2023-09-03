@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Establece el width sea el ancho final de la caja (incluendo padding y border */
+    /*siempe es bueno ponerlo aqui par que los cambios en paddings y margins no afecten la visualizacion de la pagina*/
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; /*10px, para usar rem mas facil*/
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 20%;
+    display: block;
+}
+
+main, footer {
+    max-width: 100rem;
+    width: 100%;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    max-width: 500px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    width: 100%;
+    max-width: 100px;
+}
+
+i {
+    text-align: center;
+    font-size: 5rem;
+}
+
+#logo {
+    flex-grow: 1;
+}
+
+#nav-dummy {
+    flex-grow: 6;
+}
+
+#nav-bar {
+    flex-grow: 2;
+}
+
+#header a {
+    text-decoration: none;
+    color: inherit;
+    position: static;
+}
+
+#container-form {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#formulario {
+    text-align: center;
+}
+
+
+#header ul {
+    list-style-type: none;
+}
+
+#features {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(3, min-content);
+    column-gap: 2rem;
+    row-gap: 3rem;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.centrado-horizontal {
+    margin: 0 auto;
+}
+
+.espaciado-v {
+    margin: 50px 0;
+}
