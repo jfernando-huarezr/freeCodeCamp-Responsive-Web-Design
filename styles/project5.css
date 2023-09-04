@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+      /*paleta de colores*/
+      --color1:rgb(255, 248, 234);
+      --color2:rgb(158, 118, 118);
+      --color3:rgb(129, 91, 91);
+      --color4:rgb(89, 69, 69);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 2.5rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.grid-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: [contenido] minmax(50px, 1fr);
+    grid-template-rows: [welcome] calc(100vh - 8rem) [projects] auto [contact] auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+#welcome-section {
+    grid-row: welcome;
+    grid-column: contenido;
+    background-color: var(--color3);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 20px;   
+    
+    scroll-margin-top: 4em;
+}
+
+
+#projects {
+    grid-row: projects;
+    grid-column: contenido;
+    background-color: var(--color1);
+    text-align: center;
+
+    scroll-margin-top: 1em;
+}
+
+#contact {
+    grid-row: contact;
+    grid-column: contenido;
+    background-color: var(--color3);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 5.5rem;
+    
+    min-height: 40vh;
+    font-size: 5rem;
+
+    scroll-margin-top: 1em;
+    
+}
+
+#contact .redes {
+    display: flex;
+    justify-content: space-between;
+    font-size: 5rem;
+    column-gap: 10rem;
+    color: white;
+}
+
+
+
+#encabezado {
+    height: 8rem;
+    position: sticky;
+    top: 0px;
+    z-index: 9999 ;
+    background-color: var(--color4);
+    padding: 0 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    grid-auto-flow: row;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.espaciado {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.project-foto {
+    overflow: hidden;
+    position: relative;
+
+    margin-bottom: 2rem;
+}
+
+.project-foto:hover .project-foto-leyenda {
+    display: flex;
+}
+
+.project-foto img {
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.project-foto:hover img {
+    transform: scale(1.05);
+}
+
+.project-foto-leyenda {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    padding: 30px;
+    background-color:rgba(32,54,70,0.8) ;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+
+    /*centrar el contenido*/
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    transition: all 0.3s ease-in-out;
+    display: none;
+    /*opacity: 0 tambien funciona? */
+}
+
+.ajustar_ancho {  /*ajusta ancho con respecto de la caja padre*/
+    width: 100%;
+}
+
+
+#button-go-top {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: var(--color2);
+    color: var(--color1);
+    border: 1px solid black;
+
+    /*posicionamiento de caja*/
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    text-align: center;
+    line-height: 4.5rem; /*para centrar verticalmente. Si le pongo la misma altura de la caja (en este caso 45px), lo centra*/
+    transition: all 0.3s ease-in-out;
+}
+
+#button-go-top:hover {  /*efectos para el boton para ir al top de la pagina*/
+    background-color: transparent;
+    transform: translateY(-5px);
+    box-shadow: -3px 8px 15px 0px gray;
+
+}
+
+#footer {
+    border-top: 5px solid var(--color2);
+    background-color: var(--color4);
+    max-width: 100%;
+
+    scroll-margin-top: 1em;
+}
+
+#footer .fila {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#projects button {
+    padding: 2rem 4rem;
+    margin-top: 3rem;
+    font-size: 3rem;
+    background-color: var(--color3);
+    color: var(--color1);
+    border: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+#projects button:hover {
+    background-color: var(--color2);
+    color: var(--color4);
+}
+
+#projects a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.red {
+    transition: all 0.3s ease-in-out;
+}
+
+
+.red:hover {
+    background-color: transparent;
+    transform: translateY(20px);
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    body {
+        font-size: 1.6rem;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    #contact {
+        font-size: 2rem;
+    }
+
+    #contact .redes {
+        flex-direction: column;
+        font-size: 2.5rem;
+        row-gap: 2rem;
+    }
+}
+
